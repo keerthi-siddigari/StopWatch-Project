@@ -1,0 +1,128 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: radial-gradient(circle at center,#000000,rgb(37, 37, 37),rgb(0, 0, 0));
+  background-size: cover;
+}
+h1{
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: white;
+}
+#clock-container{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  height: clamp(250px,35vw,450px);
+  width: clamp(250px,35vw,450px);
+  border:white double 10px;
+  border-radius: 50%;
+  margin-top:10px;
+}
+
+#time{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 10px white dotted;
+ border-radius: 50%;
+ width: clamp(220px,30vw,400px);
+ height: clamp(220px,30vw,400px);
+ font-size: clamp(30px,6vw,65px);
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 10px;
+ color:white;
+}   
+.button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top:25px;
+  gap:25px;
+}
+#start_btn{
+  height:4rem;
+  width:200px;
+  font-size:30px;
+  border:5px solid black;
+  border-radius: 10px;
+}
+#start_btn:hover{
+  background-color:#6bf07d;
+  box-shadow: 10px 5px 5px black;
+}
+#start_btn:active{
+  background-color: rgb(25, 241, 54);
+  transform: translateY(2px);
+  box-shadow: none;
+}
+#stop_btn{
+  height: 4rem;
+  width:200px;
+  font-size: 30px;
+  border:5px solid black;
+  border-radius: 10px;
+  
+}
+#stop_btn:hover{
+  background-color: rgb(247, 127, 127);
+  box-shadow:10px 5px 5px black;
+}
+#stop_btn:active{
+  background-color: rgb(243, 57, 57);
+  transform: translateY(2px);
+  box-shadow: none;
+}
+#reset_btn{
+  height: 4rem;
+  width:200px;
+  font-size: 30px;
+  border:5px solid black;
+  border-radius: 10px;
+}
+#reset_btn:hover{
+  background-color: #6b95f0;
+  box-shadow:10px 5px 5px black;
+}
+#reset_btn:active{
+  background-color: rgb(29, 80, 221);
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #start_btn,
+  #stop_btn,
+  #reset_btn {
+    width: 90%;
+    padding: 0 20px;
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}
+
+
